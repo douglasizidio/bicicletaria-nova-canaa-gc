@@ -1,0 +1,1380 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+    
+                
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicicletaria Canaã - Bicicletas, Peças e Acessórios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #39FF14;
+            --primary-dark: #2ecc0e;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --light: #f5f5f5;
+            --gray: #2a2a2a;
+            --gray-light: #3a3a3a;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(57, 255, 20, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--dark);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+
+        .btn-email {
+            background: #3498db;
+        }
+
+        .btn-email:hover {
+            background: #2980b9;
+        }
+
+        .btn-phone {
+            background: #34495e;
+        }
+
+        .btn-phone:hover {
+            background: #2c3e50;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--primary), #00ff9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(57, 255, 20, 0.1);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--light);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            margin-top: 30px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--darker);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--gray);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: var(--darker);
+            border-radius: 10px;
+            border: 1px solid var(--gray);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            min-width: 40px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.2);
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
+        }
+
+        .phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #34495e;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .phone-btn:hover {
+            background: #2c3e50;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(52, 73, 94, 0.4);
+        }
+
+        .contact-form {
+            background: var(--darker);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--gray);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(57, 255, 20, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Phone Selection Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--darker);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+            border: 1px solid var(--gray);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .phone-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .phone-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid var(--gray);
+        }
+
+        .phone-option:hover {
+            background: rgba(57, 255, 20, 0.1);
+            border-color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .phone-option i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--primary);
+        }
+
+        .phone-option .phone-number {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .phone-option .phone-label {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 3px;
+        }
+
+        /* Address */
+        .address-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .address-info {
+            background: var(--darker);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--gray);
+            transition: var(--transition);
+        }
+
+        .address-info:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .address-info h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .address-details {
+            margin-bottom: 25px;
+        }
+
+        .address-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .address-details i {
+            color: var(--primary);
+            min-width: 20px;
+            margin-top: 5px;
+            transition: var(--transition);
+        }
+
+        .address-details p:hover i {
+            transform: scale(1.2);
+        }
+
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .map-container:hover {
+            transform: scale(1.02);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .navigation-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navigation-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(57, 255, 20, 0.4);
+        }
+
+        /* Social Media */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .social-card {
+            background: var(--darker);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--gray);
+            cursor: pointer;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .social-card:hover .social-icon {
+            transform: scale(1.2);
+        }
+
+        .social-instagram { color: #E1306C; }
+        .social-facebook { color: #4267B2; }
+        .social-tiktok { color: #000000; background: white; border-radius: 50%; padding: 15px; }
+
+        .social-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Payment */
+        .payment-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .payment-card {
+            background: var(--darker);
+            border-radius: 10px;
+            padding: 30px;
+            width: 250px;
+            border: 1px solid var(--gray);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .payment-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .payment-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .payment-card:hover .payment-icon {
+            transform: scale(1.2);
+        }
+
+        .pix-key {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            word-break: break-all;
+            margin-top: 15px;
+            transition: var(--transition);
+        }
+
+        .pix-key:hover {
+            background: rgba(57, 255, 20, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--gray);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            padding: 3px 0;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+            transform: translateX(3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: var(--darker);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                border-top: 1px solid var(--gray);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+            }
+            
+            .payment-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .payment-card {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .phone-options {
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero-btns {
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .whatsapp-btn, .phone-btn {
+                width: 100%;
+                justify-content: center;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-bicycle"></i>
+                Bicicletaria Canaã
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#endereco">Endereço</a></li>
+                <li><a href="#redes">Redes Sociais</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Bicicletaria Canaã</h1>
+            <p>Sua loja de confiança para bicicletas, peças, acessórios e muito mais! Especialistas em mecânica de bicicletas tradicionais e elétricas.</p>
+            <div class="hero-btns">
+                <a href="#contato" class="btn">Fale Conosco</a>
+                <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Confira tudo o que oferecemos para você e sua bicicleta</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Mecânica Especializada</h3>
+                    <p>Manutenção completa em bicicletas tradicionais e elétricas com técnicos qualificados.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Venda de Bicicletas</h3>
+                    <p>Ampla variedade de modelos para todos os estilos e necessidades.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Peças e Acessórios</h3>
+                    <p>Tudo que você precisa para sua bike em perfeito estado.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Patrocínios Esportivos</h3>
+                    <p>Apoiando campeonatos e atletas da região.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" style="background: var(--darker);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fale Conosco</h2>
+                <p>Escolha como deseja entrar em contato conosco</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>Converse conosco pelo WhatsApp</p>
+                            <button class="whatsapp-btn" onclick="openPhoneModal('whatsapp')">
+                                <i class="fab fa-whatsapp"></i> Escolher Telefone
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Telefones</h3>
+                            <p>Ligue diretamente para nós</p>
+                            <button class="phone-btn" onclick="openPhoneModal('phone')">
+                                <i class="fas fa-phone"></i> Escolher Telefone
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Envie um email para nós</p>
+                            <a href="mailto:regis-bike@hotmail.com" class="btn btn-email">
+                                <i class="fas fa-envelope"></i> Enviar Email
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sexta: 8h às 18h</p>
+                            <p>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Section -->
+    <section id="endereco">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Endereço</h2>
+                <p>Visite nossa loja física</p>
+            </div>
+            <div class="address-content">
+                <div class="address-info">
+                    <h3>Localização</h3>
+                    <div class="address-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Júlio Ribeiro dos Santos</p>
+                        <p><i class="fas fa-home"></i> Bairro: Nova Canaã</p>
+                        <p><i class="fas fa-city"></i> Cidade: Unaí-MG</p>
+                        <p><i class="fas fa-mail-bulk"></i> CEP: 38616-446</p>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=-16.37388781638769,-46.90281396477939" class="btn" target="_blank" style="margin-bottom: 15px;">
+                        <i class="fas fa-map-marked-alt"></i> Ver no Google Maps
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=-16.37388781638769,-46.90281396477939" class="navigation-btn" target="_blank">
+                        <i class="fas fa-directions"></i> Navegar até a Loja
+                    </a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6666666666665!2d-46.90281396477939!3d-16.37388781638769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zLTE2LjM3Mzg4NzgxNjM4NzY5LC00Ni45MDI4MTM5NjQ3NzkzOQ!5e0!3m2!1sen!2sbr!4v1234567890123!5m2!1sen!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="redes" style="background: var(--darker);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Redes Sociais</h2>
+                <p>Siga-nos para ficar por dentro das novidades</p>
+            </div>
+            <div class="social-grid">
+                <div class="social-card">
+                    <div class="social-icon social-instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>@bicicletaria_canaa</p>
+                    <a href="https://www.instagram.com/bicicletaria_canaa" class="btn" target="_blank">Seguir</a>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon social-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Bicicletaria Canaã</p>
+                    <a href="https://www.facebook.com/bicicletaria.novacanaa" class="btn" target="_blank">Curtir</a>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon social-tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p>@reiginaldo6</p>
+                    <a href="https://www.tiktok.com/@reiginaldo6" class="btn" target="_blank">Seguir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="pagamento">
+        <div class="container">
+            <div class="section-title">
+                <h2>Formas de Pagamento</h2>
+                <p>Pagamentos seguros e convenientes</p>
+            </div>
+            <div class="payment-content">
+                <p>Aceitamos diversas formas de pagamento para sua conveniência:</p>
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h3>Pix</h3>
+                        <p>Chave PIX:</p>
+                        <div class="pix-key">regis-bike@hotmail.com</div>
+                    </div>
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Dinheiro</h3>
+                        <p>Pagamento à vista com desconto especial</p>
+                    </div>
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Cartões</h3>
+                        <p>Parcelamos em até 12x sem juros</p>
+                    </div>
+                </div>
+                <p>Todas as transações são seguras e protegidas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Bicicletaria Canaã</h3>
+                    <p>Sua loja de confiança para bicicletas, peças, acessórios e muito mais. Especialistas em mecânica de bicicletas tradicionais e elétricas.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#endereco">Endereço</a></li>
+                        <li><a href="#redes">Redes Sociais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> (38) 99993-6825</li>
+                        <li><i class="fas fa-envelope"></i> regis-bike@hotmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Unaí-MG</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Bicicletaria Canaã. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Phone Selection Modal -->
+    <div class="modal" id="phoneModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('phoneModal')">&times;</span>
+            <h3 id="modalTitle">Escolha um Telefone</h3>
+            <p id="modalDescription">Selecione o telefone que deseja utilizar:</p>
+            <div class="phone-options" id="phoneOptions">
+                <!-- Options will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                
+                // Simple validation
+                if(name && email) {
+                    // In a real application, you would send this data to a server
+                    alert(`Obrigado, ${name}! Sua mensagem foi enviada. Entraremos em contato em breve.`);
+                    contactForm.reset();
+                } else {
+                    alert('Por favor, preencha todos os campos obrigatórios.');
+                }
+            });
+        }
+        
+        // Phone data - separated WhatsApp and Phone numbers
+        const phoneData = {
+            whatsapp: [
+                {
+                    number: "(38) 99993-6825",
+                    label: "Atendimento Geral",
+                    url: "https://wa.me/5538999936825"
+                },
+                {
+                    number: "(38) 3676-3743",
+                    label: "Atendimento Geral",
+                    url: "https://wa.me/553836763743"
+                },
+                {
+                    number: "(38) 98826-9686",
+                    label: "Proprietário",
+                    url: "https://wa.me/5538988269686"
+                }
+            ],
+            phone: [
+                {
+                    number: "(38) 99993-6825",
+                    label: "Atendimento Geral",
+                    url: "tel:5538999936825"
+                },
+                {
+                    number: "(38) 3676-3743",
+                    label: "Atendimento Geral",
+                    url: "tel:553836763743"
+                },
+                {
+                    number: "(38) 98826-9686",
+                    label: "Proprietário",
+                    url: "tel:5538988269686"
+                }
+            ]
+        };
+        
+        // Phone Selection Modal Functions
+        let currentMode = '';
+        
+        function openPhoneModal(mode) {
+            currentMode = mode;
+            const modal = document.getElementById('phoneModal');
+            const title = document.getElementById('modalTitle');
+            const description = document.getElementById('modalDescription');
+            const optionsContainer = document.getElementById('phoneOptions');
+            
+            // Clear previous options
+            optionsContainer.innerHTML = '';
+            
+            if (mode === 'whatsapp') {
+                title.textContent = 'Escolha um WhatsApp';
+                description.textContent = 'Selecione o número de WhatsApp que deseja utilizar:';
+                
+                phoneData.whatsapp.forEach(phone => {
+                    const option = document.createElement('div');
+                    option.className = 'phone-option';
+                    option.innerHTML = `
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <div class="phone-number">${phone.number}</div>
+                            <div class="phone-label">${phone.label} (WhatsApp)</div>
+                        </div>
+                    `;
+                    option.onclick = () => selectPhone(phone.url);
+                    optionsContainer.appendChild(option);
+                });
+            } else {
+                title.textContent = 'Escolha um Telefone';
+                description.textContent = 'Selecione o número para ligação:';
+                
+                phoneData.phone.forEach(phone => {
+                    const option = document.createElement('div');
+                    option.className = 'phone-option';
+                    option.innerHTML = `
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <div class="phone-number">${phone.number}</div>
+                            <div class="phone-label">${phone.label} (Ligação)</div>
+                        </div>
+                    `;
+                    option.onclick = () => selectPhone(phone.url);
+                    optionsContainer.appendChild(option);
+                });
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function selectPhone(url) {
+            window.open(url, '_blank');
+            closeModal('phoneModal');
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('phoneModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal('phoneModal');
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal('phoneModal');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+    
+              <script>
+                              
+              </script>
+                        </body>
+                        </html>
+                    

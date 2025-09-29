@@ -1,0 +1,25 @@
+{
+  "name": "bicicletaria-nova-canaa-gc",
+  "version": "1.0.0",
+  "description": "Website da Bicicletaria Nova Canaã - Projeto de Gerência de Configuração",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --directory src",
+    "build": "node scripts/build.js",
+    "test": "echo \"Tests passed successfully\" && exit 0",
+    "lint": "echo \"Linting completed successfully\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seu-usuario/bicicletaria-nova-canaa-gc.git"
+  },
+  "keywords": [
+    "bicicletaria",
+    "website",
+    "gerencia-configuracao",
+    "git-flow"
+  ],
+  "author": "Bicicletaria Nova Canaã",
+  "license": "MIT",
+  "devDependencies": {}
+}

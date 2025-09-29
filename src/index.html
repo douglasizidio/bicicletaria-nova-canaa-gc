@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicicletaria Canaã - Bicicletas, Peças e Acessórios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-bicycle"></i>
+                Bicicletaria Canaã
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#endereco">Endereço</a></li>
+                <li><a href="#redes">Redes Sociais</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Bicicletaria Canaã</h1>
+            <p>Sua loja de confiança para bicicletas, peças, acessórios e muito mais! Especialistas em mecânica de bicicletas tradicionais e elétricas.</p>
+            <div class="hero-btns">
+                <a href="#contato" class="btn">Fale Conosco</a>
+                <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Confira tudo o que oferecemos para você e sua bicicleta</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Mecânica Especializada</h3>
+                    <p>Manutenção completa em bicicletas tradicionais e elétricas com técnicos qualificados.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Venda de Bicicletas</h3>
+                    <p>Ampla variedade de modelos para todos os estilos e necessidades.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Peças e Acessórios</h3>
+                    <p>Tudo que você precisa para sua bike em perfeito estado.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Patrocínios Esportivos</h3>
+                    <p>Apoiando campeonatos e atletas da região.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" style="background: var(--darker);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fale Conosco</h2>
+                <p>Escolha como deseja entrar em contato conosco</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>Converse conosco pelo WhatsApp</p>
+                            <button class="whatsapp-btn" onclick="openPhoneModal('whatsapp')">
+                                <i class="fab fa-whatsapp"></i> Escolher Telefone
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Telefones</h3>
+                            <p>Ligue diretamente para nós</p>
+                            <button class="phone-btn" onclick="openPhoneModal('phone')">
+                                <i class="fas fa-phone"></i> Escolher Telefone
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Envie um email para nós</p>
+                            <a href="mailto:regis-bike@hotmail.com" class="btn btn-email">
+                                <i class="fas fa-envelope"></i> Enviar Email
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sexta: 8h às 18h</p>
+                            <p>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Section -->
+    <section id="endereco">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Endereço</h2>
+                <p>Visite nossa loja física</p>
+            </div>
+            <div class="address-content">
+                <div class="address-info">
+                    <h3>Localização</h3>
+                    <div class="address-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Júlio Ribeiro dos Santos</p>
+                        <p><i class="fas fa-home"></i> Bairro: Nova Canaã</p>
+                        <p><i class="fas fa-city"></i> Cidade: Unaí-MG</p>
+                        <p><i class="fas fa-mail-bulk"></i> CEP: 38616-446</p>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=-16.37388781638769,-46.90281396477939" class="btn" target="_blank" style="margin-bottom: 15px;">
+                        <i class="fas fa-map-marked-alt"></i> Ver no Google Maps
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=-16.37388781638769,-46.90281396477939" class="navigation-btn" target="_blank">
+                        <i class="fas fa-directions"></i> Navegar até a Loja
+                    </a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6666666666665!2d-46.90281396477939!3d-16.37388781638769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zLTE2LjM3Mzg4NzgxNjM4NzY5LC00Ni45MDI4MTM5NjQ3NzkzOQ!5e0!3m2!1sen!2sbr!4v1234567890123!5m2!1sen!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="redes" style="background: var(--darker);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Redes Sociais</h2>
+                <p>Siga-nos para ficar por dentro das novidades</p>
+            </div>
+            <div class="social-grid">
+                <div class="social-card">
+                    <div class="social-icon social-instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>@bicicletaria_canaa</p>
+                    <a href="https://www.instagram.com/bicicletaria_canaa" class="btn" target="_blank">Seguir</a>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon social-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Bicicletaria Canaã</p>
+                    <a href="https://www.facebook.com/bicicletaria.novacanaa" class="btn" target="_blank">Curtir</a>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon social-tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p>@reiginaldo6</p>
+                    <a href="https://www.tiktok.com/@reiginaldo6" class="btn" target="_blank">Seguir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="pagamento">
+        <div class="container">
+            <div class="section-title">
+                <h2>Formas de Pagamento</h2>
+                <p>Pagamentos seguros e convenientes</p>
+            </div>
+            <div class="payment-content">
+                <p>Aceitamos diversas formas de pagamento para sua conveniência:</p>
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h3>Pix</h3>
+                        <p>Chave PIX:</p>
+                        <div class="pix-key">regis-bike@hotmail.com</div>
+                    </div>
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Dinheiro</h3>
+                        <p>Pagamento à vista com desconto especial</p>
+                    </div>
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Cartões</h3>
+                        <p>Parcelamos em até 12x sem juros</p>
+                    </div>
+                </div>
+                <p>Todas as transações são seguras e protegidas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Bicicletaria Canaã</h3>
+                    <p>Sua loja de confiança para bicicletas, peças, acessórios e muito mais. Especialistas em mecânica de bicicletas tradicionais e elétricas.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#endereco">Endereço</a></li>
+                        <li><a href="#redes">Redes Sociais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> (38) 99993-6825</li>
+                        <li><i class="fas fa-envelope"></i> regis-bike@hotmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Unaí-MG</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Bicicletaria Canaã. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Phone Selection Modal -->
+    <div class="modal" id="phoneModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('phoneModal')">&times;</span>
+            <h3 id="modalTitle">Escolha um Telefone</h3>
+            <p id="modalDescription">Selecione o telefone que deseja utilizar:</p>
+            <div class="phone-options" id="phoneOptions">
+                <!-- Options will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
