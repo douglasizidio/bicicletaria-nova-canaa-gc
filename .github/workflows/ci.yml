@@ -1,0 +1,68 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run linting
+      run: npm run lint
+
+    - name: Run tests
+      run: npm test
+
+    - name: Build project
+      run: npm run build
+
+    - name: Validate HTML structure
+      run: |
+        echo "✅ Validating HTML files..."
+        if [ -f "src/index.html" ]; then
+          echo "✅ index.html exists"
+        else
+          echo "❌ index.html not found"
+          exit 1
+        fi
+
+    - name: Validate CSS structure
+      run: |
+        echo "✅ Validating CSS files..."
+        if [ -f "src/css/style.css" ]; then
+          echo "✅ style.css exists"
+        else
+          echo "❌ style.css not found"
+          exit 1
+        fi
+
+    - name: Validate JS structure
+      run: |
+        echo "✅ Validating JavaScript files..."
+        if [ -f "src/js/main.js" ]; then
+          echo "✅ main.js exists"
+        else
+          echo "❌ main.js not found"
+          exit 1
+        fi
+
+    - name: CI Pipeline Success
+      run: |
+        echo "🎉 CI Pipeline completed successfully!"
+        echo "✅ All checks passed"
+        echo "✅ Project is ready for deployment"
